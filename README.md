@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/Sonophoto/pyTeleBot.svg?branch=master)](https://travis-ci.com/Sonophoto/pyTeleBot)
+
+
 # pyTeleBot
 
 Founding the base of a Telegram Bot coded in Python 3.8, With Travis CI and Heroku CD.
