@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.com/Sonophoto/pyTeleBot.svg?branch=master)](https://travis-ci.com/Sonophoto/pyTeleBot)
-
+[![Build Status](https://travis-ci.com/Sonophoto/pyTeleBot.svg?branch=main)](https://travis-ci.com/Sonophoto/pyTeleBot)
 
 # pyTeleBot
 
