@@ -39,11 +39,14 @@ def help_command(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /help is issued."""
     update.message.reply_text('Help! I\'ve fallen and I get up!')
 
+def weather_command(update: Update, context: CallbackContext) -> None:
+    """Send a message when the command /weather issued."""
+    update.message.reply_text('Your weather report for your Location')
 
 def echo(update: Update, context: CallbackContext) -> None:
     """Echo the user message."""
-    update.message.reply_text(update.message.text)
-    #pass
+    #update.message.reply_text(update.message.text)
+    pass
 
 
 def main():
@@ -60,9 +63,10 @@ def main():
     # on different commands - answer in Telegram
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("help", help_command))
+    dispatcher.add_handler(CommandHandler("weather", weather_command))
 
     # on noncommand i.e message - echo the message on Telegram
-    dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, echo))
+    # dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, echo))
 
     # Start the Bot
     updater.start_polling()
