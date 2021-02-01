@@ -15,6 +15,7 @@ bot.
 """
 
 import logging
+import os as os
 
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
@@ -31,17 +32,18 @@ logger = logging.getLogger(__name__)
 # context. Error handlers also receive the raised TelegramError object in error.
 def start(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /start is issued."""
-    update.message.reply_text('Hi!')
+    update.message.reply_text('Hi! I\'m pyTeleBot!')
 
 
 def help_command(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /help is issued."""
-    update.message.reply_text('Help!')
+    update.message.reply_text('Help! I\'ve fallen and I get up!')
 
 
 def echo(update: Update, context: CallbackContext) -> None:
     """Echo the user message."""
     update.message.reply_text(update.message.text)
+    #pass
 
 
 def main():
@@ -49,7 +51,8 @@ def main():
     # Create the Updater and pass it your bot's token.
     # Make sure to set use_context=True to use the new context based callbacks
     # Post version 12 this will no longer be necessary
-    updater = Updater("TOKEN", use_context=True)
+    Bot_API_Key = os.getenv('BOT_FATHER_KEY')
+    updater = Updater(Bot_API_Key, use_context=True)
 
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
