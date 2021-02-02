@@ -37,7 +37,7 @@ def start(update: Update, context: CallbackContext) -> None:
 
 def help_command(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /help is issued."""
-    update.message.reply_text('Help! I\'ve fallen and I get up!')
+    update.message.reply_text('Help! I\'ve fallen and I can\'t get up!')
 
 def weather_command(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /weather issued."""
